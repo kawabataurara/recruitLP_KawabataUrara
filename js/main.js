@@ -44,9 +44,7 @@
       }
     }
   });
-
   observerShowScrollTopBtn.observe(document.getElementById('js-main'));
-
   const image = document.getElementsByClassName('thumbnail');
   new simpleParallax(image, {
     orientation: 'down',
@@ -54,31 +52,24 @@
     overflow: true,
     delay: 0,
   });
-
-    // infographicのAPI
-
+  // infographicのAPI
   const targets = document.querySelectorAll('.js-fadeIn');
 
-  function callback(entries, obs) {   
+  function callback(entries, obs) {
     console.log(entries);
-
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
         return;
       }
-
       entry.target.classList.add('appear');
       obs.unobserve(entry.target);
     });
   }
-
   const options = {
     threshold: 0,
     rootMargin: '0px 0px'
   };
-
   const observer = new IntersectionObserver(callback, options);
-
   targets.forEach(target => {
     observer.observe(target);
   });
