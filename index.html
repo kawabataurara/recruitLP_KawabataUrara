@@ -12,8 +12,8 @@
 <body>
   <header id="js-header">
     <div class="header-items">
-      <div class="icon">
-        <a href="https://lull-inc.co.jp/" rel="noopener noreferrer" target="_blank"><svg class="head-sitename_logo is--loaded" viewbox="0 0 300 52" xmlns="http://www.w3.org/2000/svg">
+      <h1 class="icon">
+        <a href="https://lull-inc.co.jp/" rel="noopener noreferrer" target="_blank"><svg class="head-sitename_logo is--loaded" viewbox="0 0 300 52" aria-label="LULLリクルートサイト" xmlns="http://www.w3.org/2000/svg">
             <g>
               <polygon points="10.5,41.6 10.5,0 0,0 0,52 42,52 42,41.6 &#9;"></polygon>
               <polygon points="117.7,41.6 117.7,0 107.2,0 107.2,52 149.2,52 149.2,41.6 &#9;"></polygon>
@@ -27,7 +27,7 @@
           </svg>
           <p class="icon-text">RECRUIT SITE</p>
         </a>
-      </div><!-- ハンバーガーメニュー -->
+      </h1><!-- ハンバーガーメニュー -->
       <div class="toggle_btn" id="js-btn">
         <span></span> <span></span> <span></span>
       </div>
@@ -36,23 +36,18 @@
           <li class="section-list">
             <a href="#about">私たちのこと</a>
           </li>
-          <li class="slash"></li>
           <li class="section-list">
             <a href="#service">事業内容</a>
           </li>
-          <li class="slash"></li>
           <li class="section-list">
             <a href="#message">社長メッセージ</a>
           </li>
-          <li class="slash"></li>
           <li class="section-list">
             <a href="#infographic">数字で見るLULL</a>
           </li>
-          <li class="slash"></li>
           <li class="section-list">
             <a href="#interview">インタビュー</a>
           </li>
-          <li class="slash"></li>
           <li class="section-list section-list-last">
             <a href="#recruitment">募集要項</a>
           </li>
@@ -66,13 +61,13 @@
   <main>
     <section class="main-visual" id="js-main">
       <picture>
-        <source media="(min-width: 770px)" srcset="./images/main-visual.png"> <img alt="メインビジュアル" src="./images/main-visual-sp.png">
+        <source media="(min-width: 770px)" srcset="./images/main-visual.png"><img alt="メインビジュアル" src="./images/main-visual-sp.png" class="thumbnail">
       </picture>
       <div class="main-title">
-        <h1>代わりのきかない<br>
-				<span>「ワタシ」</span>になる。</h1><span class="main-border"></span>
-        <h2 class="sub-title"><span>IT人材の育成が、<br>
-				新たな価値を生み出す。<br></span> LULLはあなたの挑戦を歓迎します。</h2>
+        <h2>代わりのきかない<br>
+				<span>「ワタシ」</span>になる。</h2>
+        <h3 class="sub-title"><span>IT人材の育成が、<br>
+				新たな価値を生み出す。<br></span> LULLはあなたの挑戦を歓迎します。</h3>
       </div>
     </section>
     <section class="about" id="about">
@@ -83,7 +78,7 @@
         </div>
         <div class="content-inner">
           <div class="about-content">
-            <div class="about-img"><img alt="about画像" src="./images/about.png"></div>
+            <div class="about-img"></div>
             <div class="about-text">
               <h4>人の価値と<br>
 							未来を創造する</h4>
@@ -105,16 +100,13 @@
         </div>
         <div class="content-inner">
           <div class="service-content">
-            <div class="service-items">
-              <img alt="WEB制作事業画像" class="service-img" src="./images/service1.png">
+            <div class="service-items1 js-fadeIn">
               <p>WEB制作事業</p>
             </div>
-            <div class="service-items">
-              <img alt="SES事業画像" class="service-img" src="./images/service2.png">
+            <div class="service-items2 js-fadeIn">
               <p>SES事業</p>
             </div>
-            <div class="service-items">
-              <img alt="一般派遣事業画像" class="service-img" src="./images/service3.png">
+            <div class="service-items3 js-fadeIn">
               <p>一般派遣事業</p>
             </div>
           </div>
@@ -135,7 +127,7 @@
               <p>私たちは学び、働き、そして遊びを通して成長をしていくことで、物心両面が豊かになり、より良い未来を創造していくことが可能と考えております。</p>
               <p>私たちと関わる顧客、企業の皆様にとって、より最適でかつ満足度の高いサービスを開発し続け、皆様から最高の<span class="message-strong">『価値』</span>を感じていただける組織を目指して参ります。</p>
               <p>これからの未来へ向けて常に新しい<span class="message-strong">『価値』</span>を生み出していくことに挑戦します。</p>
-              <p>代表取締役　<span class="message-name">細井 裕作</span></p>
+              <p>代表取締役<span class="message-name">細井 裕作</span></p>
             </div>
           </div>
         </div>
@@ -149,14 +141,14 @@
         </div>
         <div class="content-inner">
           <div class="infographic-content">
-            <div class="infographic-items items1">
+            <div class="infographic-items items1 js-fadeIn">
               <h5>従業員数</h5>
               <p class="infographic-images"><picture><source media="(min-width: 1114px)" srcset="./images/infographic1-pc.png"> <img alt="従業員数" src="./images/infographic1-sp.png"></picture></p>
               <div class="infographic-data">
                 <h6><span>310</span>名</h6>
               </div>
             </div>
-            <div class="infographic-items items2">
+            <div class="infographic-items items2 js-fadeIn">
               <h5>平均年齢</h5>
               <p class="infographic-images"><img alt="平均年齢" src="./images/infographic2.png"></p>
               <div class="infographic-right">
@@ -165,7 +157,7 @@
                 </div>
               </div>
             </div>
-            <div class="infographic-items items3">
+            <div class="infographic-items items3 js-fadeIn">
               <h5><span class="inline-block">管理職</span><span class="inline-block">平均年齢</span></h5>
               <p class="infographic-images"><img alt="管理職平均年齢" src="./images/infographic3.png"></p>
               <div class="infographic-right">
@@ -174,7 +166,7 @@
                 </div>
               </div>
             </div>
-            <div class="infographic-items items4">
+            <div class="infographic-items items4 js-fadeIn">
               <h5>男女比</h5>
               <p class="infographic-images"><img alt="男女比" src="./images/infographic4.png"></p>
               <div class="infographic-data-gender">
@@ -188,14 +180,14 @@
                 </div>
               </div>
             </div>
-            <div class="infographic-items items5">
+            <div class="infographic-items items5 js-fadeIn">
               <h5>有給休暇取得率</h5>
               <p class="infographic-images"><img alt="有給休暇取得率" src="./images/infographic5.png"></p>
               <div class="infographic-data">
                 <h6><span>80</span>%</h6>
               </div>
             </div>
-            <div class="infographic-items items6">
+            <div class="infographic-items items6 js-fadeIn">
               <h5>創業年数</h5>
               <p class="infographic-images"><img alt="創業年数" src="./images/infographic6.png"></p>
               <div class="infographic-data">
@@ -205,7 +197,6 @@
           </div>
         </div>
       </div>
-      <div class="square"></div>
     </section>
     <section class="interview" id="interview">
       <div class="container">
@@ -217,7 +208,7 @@
           <div class="interview-item">
             <a href="">
               <div class="interview-img">
-                <img alt="インタビュー画像1" src="./images/interview.png">
+                <img alt="人材コンサルティング事業部_見澤真一_インタビューのイメージ" src="./images/interview.png">
                 <h5>1人1人の可能性と<br>
 							活躍のできる場をお届けしたい。</h5>
               </div>
@@ -238,11 +229,9 @@
           <h3>Recruitment</h3><span class="title-border"></span>
           <p>募集要項</p>
         </div>
-      </div>
       <div class="content-inner">
         <div class="recruitment-content">
-          <div class="recruitment-items">
-            <img alt="WEBデザイナー職" class="recruitment-img" src="./images/recruitment1.png">
+          <div class="recruitment-items designer">
             <div class="recruitment-text">
               <p>WEB デザイナー職</p><small>Web Designer</small> <a href="" rel="noopener noreferrer" target="_blank">
                 <div class="recruitment-btn">
@@ -253,8 +242,7 @@
               </a>
             </div>
           </div>
-          <div class="recruitment-items">
-            <img alt="営業企画職" src="./images/recruitment2.png">
+          <div class="recruitment-items marketing">
             <div class="recruitment-text">
               <p>営業企画職</p><small>Marketing</small> <a href="" rel="noopener noreferrer" target="_blank">
                 <div class="recruitment-btn">
@@ -268,10 +256,11 @@
         </div>
       </div>
       <div class="entry">
-        <span>ENTRY</span>
+        <span></span>
         <div class="entry-item">
           <a class="last-entry-btn" href="" rel="noopener noreferrer" target="_blank">ENTRY</a>
         </div>
+      </div>
       </div>
     </section>
   </main>
@@ -313,7 +302,7 @@
           <a href="#recruitment">募集要項</a>
         </li>
       </ul>
-    </div><small>© LULL INC. ALL RIGHTS RESERVED.</small>
+    </div><small>&copy;LULL INC. ALL RIGHTS RESERVED.</small>
   </footer><a href="#js-main">
     <div class="top" id="page-top">
       <span class="triangle"></span>
@@ -321,6 +310,7 @@
   </a>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll">
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
   <script src="js/main.js">
   </script>
 </body>

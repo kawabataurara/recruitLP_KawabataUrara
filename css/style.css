@@ -108,6 +108,7 @@ header .header-list {
 
 header ul {
   gap: 40px;
+  margin-top: 80px;
 }
 
 header ul li {
@@ -115,26 +116,16 @@ header ul li {
 }
 
 header ul .section-list {
-  padding: 0 0.75rem;
   font-weight: 500;
 }
 
-header ul .slash {
-  display: none;
-  content: "";
-  width: 16px;
-  height: 1px;
-  background: #245E83;
-  -webkit-transform: rotate(-60deg);
-  transform: rotate(-60deg);
-}
 
 header ul .first-entry-btn {
   position: relative;
   border: 1px solid #245E83;
   border-radius: 9999px;
   padding: 0.75rem 3rem;
-  margin: 12px;
+  margin: 1rem;
   letter-spacing: 0.1em;
   font-family: Arial;
 }
@@ -352,17 +343,18 @@ header.changed .toggle_btn span {
   font-weight: 500;
 }
 
-.main-visual .main-title h1 {
+.main-visual .main-title h2 {
   line-height: 1.4;
   letter-spacing: 0.25em;
-  font-size: clamp(30px, 48 / 1440 * 100vw, 48 / 1440 * 1920px);
+  font-size: clamp(20px, 48 / 1440 * 100vw, 48 / 1440 * 1920px);
 }
 
-.main-visual .main-title h1 span {
-  font-size: clamp(34px, 56 / 1440 * 100vw, 56 / 1440 * 1920px);
+.main-visual .main-title h2 span {
+  font-size: clamp(24px, 56 / 1440 * 100vw, 56 / 1440 * 1920px);
 }
 
-.main-visual .main-title .main-border {
+.main-visual .main-title h2::after {
+  content: "";
   display: block;
   margin: 30px 0;
   height: 3px;
@@ -419,12 +411,25 @@ header.changed .toggle_btn span {
 
 /* about */
 
+.about {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
 .about .about-content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
   gap: 100px;
+}
+
+.about .about-content .about-img {
+  background: url("../images/about.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 40%;
+  background-position: center;
 }
 
 .about .about-text h4 {
@@ -442,7 +447,7 @@ header.changed .toggle_btn span {
 /* service */
 
 .service {
-  background-image: url(../images/servise-back.png);
+  background-image: url(../images/service-back.png);
   background-size: cover;
 }
 
@@ -450,20 +455,54 @@ header.changed .toggle_btn span {
   text-align: center;
   display: flex;
   justify-content: space-between;
-  gap: 5%;
 }
 
-.service .service-content .service-items {
+.service .service-content div {
   filter: drop-shadow(0px 0px 16px rgba(36, 94, 131, 0.4));
-}
-
-.service .service-content .service-items img {
   border-radius: 14px 14px 0 0;
+  padding: 14% 16%;
 }
 
-.service .service-content .service-items p {
+.service .service-content div.service-items1 {
+  background: url(../images/service1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.service .service-content div.service-items2 {
+  background: url(../images/service2.png);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    }
+
+
+.service .service-content div.service-items3 {
+  background: url(../images/service3.png);
+  background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.service .service-content div.js-fadeIn,
+.infographic .js-fadeIn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s, transform 1.2s;
+}
+
+.service .service-content div.js-fadeIn.appear,
+.infographic .js-fadeIn.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service .service-content div p {
   display: block;
-  position: relative;
+  position: absolute;
+  bottom: -14%;
+  left: 0;
   width: 100%;
   padding: 1.125rem 0;
   font-weight: 500;
@@ -472,7 +511,7 @@ header.changed .toggle_btn span {
   border-radius: 0 0 14px 14px;
 }
 
-.service .service-content .service-items p::after {
+.service .service-content div p::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -511,6 +550,7 @@ header.changed .toggle_btn span {
 
 .message .message-text .message-name {
   font-size: 1.25rem;
+  margin-left: 10px;
 }
 
 .message .message-text .message-strong {
@@ -637,17 +677,9 @@ header.changed .toggle_btn span {
   display: inline-block;
 }
 
-.infographic .items1 h5,
-.infographic .items4 h5,
-.infographic .items5 h5,
-.infographic .items6 h5 {
-  width: 80%;
-}
-
 .infographic .items2 h5,
 .infographic .items3 h5 {
   margin: 0 auto 0.6rem auto;
-  width: 50%;
 }
 
 .infographic .infographic-data {
@@ -697,9 +729,12 @@ header.changed .toggle_btn span {
   border-radius: 14px 14px 0 0;
 }
 
+.interview .interview-item .interview-img img {
+  transition-duration: 1s;
+}
+
 .interview .interview-item:hover .interview-img img {
   transform: scale(1.2, 1.2);
-  transition: 1s all;
 }
 
 .interview .interview-item h5 {
@@ -759,6 +794,10 @@ header.changed .toggle_btn span {
 
 /* recruitment */
 
+.recruitment .container {
+  width: 100%;
+}
+
 .recruitment .recruitment-content {
   display: flex;
   justify-content: center;
@@ -766,6 +805,21 @@ header.changed .toggle_btn span {
 
 .recruitment .recruitment-items {
   position: relative;
+  width: 100%;
+  height: 300px;
+}
+.recruitment .recruitment-items.designer {
+  background: url(../images/recruitment1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.recruitment .recruitment-items.marketing {
+  background: url(../images/recruitment2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .recruitment .recruitment-items .recruitment-text {
@@ -843,7 +897,8 @@ header.changed .toggle_btn span {
   font-weight: bold;
 }
 
-.entry span {
+.entry span::before {
+  content: "ENTRY";
   position: absolute;
   font-size: 10rem;
   opacity: 8%;
@@ -863,21 +918,20 @@ header.changed .toggle_btn span {
 }
 
 .entry-item .last-entry-btn {
-  box-sizing: content-box;
+  box-sizing: border-box;
   position: relative;
   display: block;
-  width: 100%;
   padding: 2.75rem 0;
-  border: 3px solid #fff;
+  border: 3px solid rgb(36, 94, 131, 0);
   border-radius: 9999px;
   background: linear-gradient(to right, #245E83, #3288AA);
+  transition: 1s;
 }
 
 .entry-item .last-entry-btn:hover {
   border: 3px solid #245E83;
-  background: #fff;
+  background: transparent;
   color: #245E83;
-  transition: 0.6s;
 }
 
 /* footer */
@@ -942,7 +996,7 @@ footer small {
   transition: opacity 350ms ease;
   border: 1px solid #245E83;
   filter: drop-shadow(0px 0px 16px rgba(255, 255, 255, 0.4));
-  z-index: 30;
+  z-index: 9;
   opacity: 0;
 }
 
@@ -992,6 +1046,14 @@ footer small {
     width: calc(100% - 8%);
   }
 
+  .content-title h3 {
+    font-size: 1.625rem;
+  }
+
+  .main-visual .main-title {
+    bottom: 14%;
+  }
+
   /* about */
   .about .container {
     width: 100%;
@@ -1002,17 +1064,24 @@ footer small {
     margin: 80px 0 0 0;
   }
 
+    .about .about-content {
+      gap: 0;
+    }
+
   .about .about-text {
-    width: calc(100% - 8%);
-    text-align: center;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .about .about-text p {
     font-size: 0.875rem;
     text-align: justify;
-    width: 70%;
-    margin: 30px auto 0;
   }
+
+ .about .about-content .about-img {
+  width: 100%;
+  background-position: bottom center;
+ }
 
   /* service */
   .service .service-content {
@@ -1021,11 +1090,17 @@ footer small {
     gap: 60px;
   }
 
-  .service .service-content .service-items {
+  .service .service-content div {
+    position: relative;
     width: 80%;
+    height: 200px;
   }
 
   /* infographic */
+
+    .infographic .container {
+      width: calc(100% - 8%);
+    }
   .infographic .infographic-content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 240px 240px 240px;
@@ -1096,11 +1171,6 @@ footer small {
     width: auto;
   }
 
-  .infographic .items2 h5,
-  .infographic .items3 h5 {
-    width: 80%;
-  }
-
   .infographic .infographic-data h6 span {
     font-size: 40px;
   }
@@ -1139,10 +1209,10 @@ footer small {
   }
 
   /* entry */
-  .entry span {
-    display: block;
+
+   .entry span::before {
     font-size: 6rem;
-  }
+   }
 
   .entry-item {
     width: 80%;
@@ -1205,6 +1275,7 @@ footer small {
     margin-bottom: 20px;
   }
 
+
   header ul .first-entry-btn:hover {
     border: 1px solid #245E83;
     background: #fff;
@@ -1249,12 +1320,23 @@ footer small {
 
   header ul {
     gap: 0;
+    margin-top: 0;
   }
 
-  header ul .slash {
-    display: inline-block;
-    background: #fff;
-  }
+    header ul li a::before {
+      content: "/";
+      color: #fff;
+      padding: 0 1rem;
+    }
+
+    header ul li:first-child a::before {
+      content: none;
+    }
+
+    header ul li:last-child a {
+      content: none;
+    }
+
 
   header ul .first-entry-btn {
     border: 1px solid #fff;
@@ -1266,9 +1348,9 @@ footer small {
   }
 
   /* ヘッダーのスクロール後 */
-  header.changed ul .slash {
-    color: #245E83;
-  }
+    header.changed ul li a::before {
+      color: #245E83;
+    }
 
   header.changed ul .first-entry-btn {
     border: 1px solid #fff;
@@ -1297,10 +1379,6 @@ footer small {
     transition: 0.2s;
   }
 
-  header.changed ul .slash {
-    background: #245E83;
-  }
-
   /* main-visual */
   /* about */
   .about .about-content {
@@ -1309,7 +1387,7 @@ footer small {
   }
 
   .about .about-content .about-img {
-    width: 50%;
+    padding: 20%;
   }
 
   .about .about-text {
