@@ -543,7 +543,7 @@ header.changed .toggle_btn span {
   flex-direction: column;
   gap: 30px;
   line-height: 1.4;
-  width: 70%;
+  width: 80%;
   font-size: 0.875rem;
 }
 
@@ -614,7 +614,8 @@ header.changed .toggle_btn span {
 .infographic .infographic-items.items5,
 .infographic .infographic-items.items6 {
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5%;
 }
 
 .infographic .items1 {
@@ -898,12 +899,11 @@ header.changed .toggle_btn span {
 }
 
 .entry::before {
+  display: block;
   content: "ENTRY";
-  position: absolute;
   font-size: 10rem;
   opacity: 8%;
-  top: -70%;
-  left: 0;
+  margin-bottom: -20px;
 }
 
 .entry-item {
@@ -1164,8 +1164,9 @@ footer small {
   .infographic .infographic-items.items2,
   .infographic .infographic-items.items3 {
     position: static;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10%;
+    gap: 5%;
   }
 
   .infographic .items2 .infographic-images,
@@ -1246,6 +1247,10 @@ footer small {
   .entry-item::after {
     top: 44px;
   }
+
+  .entry::before {
+  font-size: 6rem;
+}
 
   /* footer */
   footer .footer-area ul {
@@ -1491,4 +1496,11 @@ footer small {
   .message .message-text {
     width: 50%;
   }
+
+.infographic .infographic-items.items1,
+.infographic .infographic-items.items4,
+.infographic .infographic-items.items5,
+.infographic .infographic-items.items6 {
+  gap: 10%;
+}
 }
