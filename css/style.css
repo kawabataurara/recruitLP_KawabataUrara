@@ -336,6 +336,10 @@ header.changed .toggle_btn span {
   z-index: 1;
 }
 
+.main-visual img {
+  margin: -8% 0;
+}
+
 .main-visual .main-title {
   position: absolute;
   bottom: 24%;
@@ -1062,6 +1066,10 @@ footer small {
     display: none;
   }
 
+  .content-inner {
+    margin: 80px 0 0 0;
+  }
+
   /* header */
   /* main-visual */
   .container {
@@ -1348,6 +1356,10 @@ footer small {
 
 @media only screen and (min-width:800px) and (max-width:1114px) {
 
+  .main-visual img {
+    margin: -4% 0;
+  }
+
   .infographic .items2 .infographic-images,
   .infographic .items3 .infographic-images {
     left: 10%;
@@ -1465,6 +1477,9 @@ footer small {
   }
 
   /* main-visual */
+  .main-visual img {
+    margin: 0;
+  }
   /* about */
   .about .about-content {
     flex-direction: row;
